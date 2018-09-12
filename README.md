@@ -33,6 +33,7 @@ cd nginx-1.9.7/ && ./configure \
 
 #### Modif nginx.conf
 http {
+
 add 	log_format custom '$request_body';
 add	access_log /var/log/nginx/access.log custom;
 del      include /etc/nginx/sites-enabled/*;
