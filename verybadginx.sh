@@ -23,17 +23,17 @@ fi
 
 trap '{ pkill nginx ; exit 1; }' INT
 
-sed '50 c proxy_pass '$site';' /etc/nginx/sites-available/default > /etc/nginx/sites-available/zizi
+sed '/proxy_pass/ c proxy_pass '$site';' /etc/nginx/sites-available/default > /etc/nginx/sites-available/zizi
 mv /etc/nginx/sites-available/zizi /etc/nginx/sites-available/default
 
-sed '50 c proxy_pass '$site';' /etc/nginx/sites-enabled/default > /etc/nginx/sites-enabled/zizi
+sed '/proxy_pass/ c proxy_pass '$site';' /etc/nginx/sites-enabled/default > /etc/nginx/sites-enabled/zizi
 mv /etc/nginx/sites-enabled/zizi /etc/nginx/sites-enabled/default
 
 
-sed  '51 c subs_filter "</div>" "</div>'$inject'" -o;' /etc/nginx/sites-available/default > /etc/nginx/sites-available/zizi
+sed  '/subs_filter/ c  subs_filter "</div>" "</div>'$inject'" -o;' /etc/nginx/sites-available/default > /etc/nginx/sites-available/zizi
 mv /etc/nginx/sites-available/zizi /etc/nginx/sites-available/default
 
-sed  '51 c subs_filter "</div>" "</div>'$inject'" -o;'  /etc/nginx/sites-enabled/default > /etc/nginx/sites-enabled/zizi
+sed  '/subs_filter/ c  subs_filter  "</div>" "</div>'$inject'" -o;'  /etc/nginx/sites-enabled/default > /etc/nginx/sites-enabled/zizi
 mv /etc/nginx/sites-enabled/zizi /etc/nginx/sites-enabled/default
 
 
@@ -42,5 +42,3 @@ mv /etc/nginx/sites-enabled/zizi /etc/nginx/sites-enabled/default
 nginx
 tail -f /var/log/nginx/access.log
 exit 0
-
-
