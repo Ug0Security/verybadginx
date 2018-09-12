@@ -45,7 +45,7 @@ add       include /etc/nginx/sites-enabled/default;
 #### Modif sites-available/default et sites-enabled/default
 
 
-	location / {
+location / {
 	
 add		echo_read_request_body;
 
