@@ -10,7 +10,7 @@ curl -O 'http://nginx.org/download/nginx-1.9.7.tar.gz';
 tar -xzvf nginx-1.9.7.tar.gz && rm nginx-1.9.7.tar.gz;
 git clone https://github.com/openresty/replace-filter-nginx-module;
 
-####  Ajout user/group nginx
+####  Create user/group nginx
 groupadd nginx
 useradd -g nginx nginx
 
