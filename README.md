@@ -2,13 +2,13 @@
 
 #### Download nginx with modules
 
-cd /tmp
-curl -L -O 'https://github.com/openresty/echo-nginx-module/archive/v0.58.tar.gz'
-tar -xzvf v0.58.tar.gz && rm v0.58.tar.gz
-mv echo-nginx-module-0.58 /tmp/echo-nginx-module
-curl -O 'http://nginx.org/download/nginx-1.9.7.tar.gz'
-tar -xzvf nginx-1.9.7.tar.gz && rm nginx-1.9.7.tar.gz
-git clone https://github.com/openresty/replace-filter-nginx-module
+cd /tmp;
+curl -L -O 'https://github.com/openresty/echo-nginx-module/archive/v0.58.tar.gz';
+tar -xzvf v0.58.tar.gz && rm v0.58.tar.gz;
+mv echo-nginx-module-0.58 /tmp/echo-nginx-module;
+curl -O 'http://nginx.org/download/nginx-1.9.7.tar.gz';
+tar -xzvf nginx-1.9.7.tar.gz && rm nginx-1.9.7.tar.gz;
+git clone https://github.com/openresty/replace-filter-nginx-module;
 
 ####  Ajout user/group nginx
 groupadd nginx
