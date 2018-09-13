@@ -1,5 +1,9 @@
 # verybadginx
 
+#### install and remove nginx (i know.. just do it and STFU)
+apt-get install nginx
+apt remove nginx
+
 #### Download nginx with modules
 
 cd /tmp;
