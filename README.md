@@ -57,5 +57,7 @@ add		subs_filter "sting_to_remplace" "sting_to_remplace<script/src='https://www.
 add		sub_filter_once on;
 
 add		proxy_set_header Accept-Encoding "";
+
+add		proxy_hide_header content-security-policy; 
 	
 
