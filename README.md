@@ -4,6 +4,11 @@
 apt-get install nginx
 apt remove nginx
 
+#### Install Sregex 
+
+git clone https://github.com/openresty/sregex
+cd sregex; make install 
+
 #### Download nginx with modules
 
 cd /tmp;
