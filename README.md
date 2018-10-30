@@ -1,4 +1,5 @@
 # verybadginx
+READ THIS AS RAW !
 
 #### install and remove nginx (i know.. just do it and STFU)
 apt-get install nginx
